@@ -22,22 +22,8 @@ def home():
 @socketio.on('message from user')
 def receive_message_from_user(message):
     print ('USER MESSAGE {}'.format(message))
-    #emit ('from Flask', message.upper(), broadcast=True)
+    #emit ('from Flask', message.upper(), broadcast=True) ****** WHY THIS WAY DOESN'T WORK? BTW NO ERROR MESSAGE IS RAISED *******
     emit('redirect', {'url': url_for('home')}, broadcast=True)
-
-
-'''
-@socketio.on('message')
-def receive_message(message):
-    print ('###### {}'.format(message))
-    send('This is a message from Flask')
-
-
-@socketio.on('custom event')
-def receive_custom_event(message):
-    print ('THE CUSTOM MESSAGE IS: {}'.format(message['nome']))
-    emit ('from Flask', {'extension' : 'Flask-SocketIO'}, json=True)
-'''
 
 
 if __name__ == '__main__':
