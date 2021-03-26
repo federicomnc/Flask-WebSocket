@@ -22,7 +22,7 @@ def home():
 @socketio.on('message from user')
 def receive_message_from_user(message):
     print ('USER MESSAGE {}'.format(message))
-    #emit ('from Flask', message.upper(), broadcast=True) ****** WHY THIS WAY DOESN'T WORK? BTW NO ERROR MESSAGE IS RAISED *******
+    #return redirect(url_for('home')) ****** WHY THIS WAY DOESN'T WORK? BTW NO ERROR MESSAGE IS RAISED *******
     emit('redirect', {'url': url_for('home')}, broadcast=True)
 
 
