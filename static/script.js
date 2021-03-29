@@ -2,12 +2,23 @@ $(document).ready(function() {
 
     var socket = io.connect('http://127.0.0.1:5000');
 
-    $('#send').on('click', function() {
+    $('#inizia').on('click', function() {
 
-        var message = $('#message').val();
+        socket.emit('inizia il gioco');
+        /*var message = $('#message').val();
 
-        socket.emit('message from user', message);
+        socket.emit('message from user', message);*/
     });
+
+     $('#Submit').on('click', function() {
+
+        socket.emit('nome');
+        /*var message = $('#message').val();
+
+        socket.emit('message from user', message);*/
+    });
+
+/*
 
     socket.on('from Flask', function(msg) {
 
@@ -18,9 +29,11 @@ $(document).ready(function() {
         alert(msg)
     });
 
+*/
     socket.on('redirect', function (data) {
-        window.location = data.url;
+        window.location = 'chivuolgiocare'
     });
+
 
 })
 

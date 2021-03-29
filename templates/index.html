@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Il gioco del Numerello</title>
 </head>
 <body>
-
+<!--
     <input type="text" id="message">
-    <button id="send">Send</button>
+-->
+    <h1>Questo è il gioco del Numerello</h1>
+    <h1>E queste sono le regole:</h1>
+    <button id="inizia">AVANTI</button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js"></script>
     <script
 			  src="https://code.jquery.com/jquery-3.6.0.js"
@@ -18,3 +21,25 @@
 
 </body>
 </html>
+
+
+<!--
+{% extends "base.html" %}
+{% block title %}Le regole del Numerello{% endblock%}
+{% block content %}
+<h1>Le regole</h1>
+{% endblock %}
+{% block index %}
+<form method="post">
+
+    <input type="text" id="message">
+    <button id="inizia">VAI</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</form>
+{% endblock %}
+-->

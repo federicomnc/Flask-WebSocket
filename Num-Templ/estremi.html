@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Estremi{% endblock%}
+{% block content %}
+<h1>Giocatore: Inserisci gli estremi</h1>
+{% endblock %}
+{% block form_estremi %}
+<form method="POST">
+    <p>Estremo inferiore: <input placeholder="Enter number..." name="inferiore"></p>
+    <p>Estremo superiore: <input placeholder="Enter number..." name="superiore"></p>
+    <p><input type="submit" value="Submit" name="Submit"></p>
+</form>
+{% endblock %}

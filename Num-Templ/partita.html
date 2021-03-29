@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Partita{% endblock%}
+{% block content %}
+<h1>Giocatore: scegli un numero tra x e y</h1>
+<h2>Inserisci la tua password e il numero che hai scelto</h2>
+{% endblock %}}
+{% block form_partita %}
+<form method="post">
+    <p><input placeholder="Enter password..." type="password" name="password"></p>
+    <p><input placeholder="Enter number..." name="numero"></p>
+    <input type="submit" value="Enter">
+</form>
+{% endblock %}

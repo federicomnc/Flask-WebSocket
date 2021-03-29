@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}I giocatori{% endblock%}
+{% block content %}
+<h1>Questi sono i partecipanti</h1>
+<p>Chi vincerà?</p>
+{% endblock %}
+{% block form_igiocatori %}
+<form method="post">
+    <input type="submit" value="GIOCA" name="gioca">
+</form>
+{% endblock %}
+{% block WS_form_igiocatori %}
+    <input type="text" id="message">
+    <button id="gioca">GIOCA</button>
+{% endblock %}
